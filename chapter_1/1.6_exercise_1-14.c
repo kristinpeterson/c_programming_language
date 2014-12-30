@@ -4,7 +4,7 @@
 
 /* histogram of character frequencies */
 main() {
-	int c, i;
+	int c, i, j;
 	int frequencies[ASCII_TABLE_SIZE];
 	
 	// initialize frequencies[] values to 0
@@ -18,6 +18,18 @@ main() {
 		++frequencies[c];
 
 	// print histogram of frequencies
+	printf("\nHISTOGRAM OF FREQUENCIES");
+	printf("\n----------------------------------\n");
+	for (i = 0; i < ASCII_TABLE_SIZE; i++) {
+		if (frequencies[i] > 0) {
+			printf("%d:\t", i);
+			for (j = 0; j < frequencies[i]; j++)
+				printf("*");
+			printf("\n");
+		}
+	}			
+
+	// print ASCII table w/ frequencies of each character
 	printf("\n-----------------------------------------------------------------\n");
 	printf(" ASCII:  FREQ\t ASCII:  FREQ\t ASCII:  FREQ\t ASCII:  FREQ");
 	printf("\n-----------------------------------------------------------------\n");
