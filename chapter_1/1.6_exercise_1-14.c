@@ -12,8 +12,8 @@ main() {
 		frequencies[i] = 0;
 
 	// iterate over stdin character by character
-	// incrementing their respective ASCII value 
-	// for each occurrance
+	// incrementing the frequency value for each
+	// occurance of a particular ASCII value
 	while ((c = getchar()) != EOF)
 		++frequencies[c];
 
